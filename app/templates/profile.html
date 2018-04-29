@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block css %}
+<link href="{{ url_for('static', filename='css/profile.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div id="profile-block">
+    <div id="contentblock">
+    <h1>Add Profile </h1>
+    
+    <form method="POST" action="{{ url_for('profile') }}" enctype="multipart/form-data">
+      {% include 'flash_messages.html' %}
+      {{ form.csrf_token }}
+     <div class="form-group"{{form.firstname.label}}
+     {% for error in form.firstname.errors %}
+     <span style="color: red;">[{{ error }}]</span>
+     {% endfor %}
+     {{form.firstname(size=25,class="form-control")}}</div>
+     
+     <div class="form-group"{{form.lastname.label}}
+     {% for error in form.lastname.errors %}
+     <span style="color: red;">[{{ error }}]</span>
+     {% endfor %}
+     {{form.lastname(size=25,class="form-control")}}</div>
+     
+     <div class="form-group"{{form.gender.label}}
+     {% for error in form.gender.errors %}
+     <span style="color: red;">[{{ error }}]</span>
+     {% endfor %}
+     {{form.gender(class="adjust form-control")}}</div>
+     
+     <div class="form-group"{{form.email.label}}
+     {% for error in form.email.errors %}
+     <span style="color: red;">[{{ error }}]</span>
+     {% endfor %}
+     {{form.email(class="adjust form-control")}}</div>
+     
+     <div class="form-group"{{form.location.label}}
+     {% for erorr in form.location.errors %}
+     <span style="color: red;">[{{ error }}]</span>
+     {% endfor %}
+     {{form.location(class="adjust form-control")}}</div>
+     
+     <div class="form-group"{{form.biography.label}}
+     {% for error in form.biography.errors %}
+     <span style="color: red;">[{{ error }}]</span>
+     {% endfor %}
+     {{form.biography(class="adjust form-control")}}</div>
+     
+     <div class="form-group"><p>Upload images here</p>
+     {{form.photograph}} 
+     <br>
+     {% for error in form.photograph.errors %}
+     <span style="color: red;">[{{ error }}]</span>
+     {% endfor %}
+     </div>
+     
+     <div>
+         <button type="submit" class="btn btn-success btn-md">Add Profile</button>
+    </div>
+     
+     </form>
+     </div>
+</div>
+{% endblock %}

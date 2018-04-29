@@ -1,0 +1,22 @@
+
+
+form label{
+    font-weight:bold;
+}
+
+#contentblock{
+    width:650px;
+    margin: 0 auto;
+}
+
+form{
+    padding:60px;
+    background-color:#add8e6;
+    box-sizing: border-box;
+    border-top:#0000A0 solid 3px;
+}
+
+#content{
+    margin:0 auto;
+    width:650px;
+}

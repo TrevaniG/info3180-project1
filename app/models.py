@@ -1,12 +1,32 @@
 from . import db
 
 
-class UserProfile(db.Model):
+class Profile_users(db.Model):
+    __tablename__='users'
+    
     id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(80))
-    last_name = db.Column(db.String(80))
-    username = db.Column(db.String(80), unique=True)
-
+    firstname = db.Column(db.String(80))
+    lastname = db.Column(db.String(80))
+    gender= db.Column(db.String(80))
+    email= db.Column(db.String(80),unique=True)
+    location= db.Column(db.String(80))
+    userdate=db.Column(db.String(15))
+    biography=db.Column(db.String(200))
+    photograph=db.Column(db.String(15))
+  
+    
+   
+    def __init__(self,firstname,lastname,gender,email,location,biography,photograph,userdate):
+        self.firstname=firstname
+        self.lastname =lastname
+        self.gender=gender
+        self.email=email
+        self.location=location
+        self.biography=biography
+        self.photograph=photograph
+        self.userdate=userdate
+       
+        
     def is_authenticated(self):
         return True
 

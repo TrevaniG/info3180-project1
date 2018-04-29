@@ -1,0 +1,58 @@
+#btn1{
+    background-color: green;
+    font-weight: bold;
+    border-color: green;
+    color: white;
+    border-radius: 10%;
+    margin-left: 50px;
+    width: 150px;
+}
+
+#btn2{
+    background-color: skyblue;
+    border-color: skyblue;
+    font-weight: bold;
+    color: white;
+    border-radius: 10%;
+    margin-left: 50px;
+    width: 150px;
+}
+#profileimage{
+    padding:16px;
+    float:left;
+    width:240px;
+    height:240px;
+    position:relative;
+}
+
+.contentblock{
+    background-color:white;
+    width:600px;
+    padding:10px;
+}
+
+.button{
+    position:relative;
+}
+
+h5{
+    color:blue;
+}
+
+.biography{
+    position:relative;
+    margin-left:15px;
+    color:grey;
+}
+
+body{
+    font-family: Open Sans;
+    font-size:13px;
+    
+}
+
+.information{
+    margin-top:50px;
+    color:grey;
+    
+}

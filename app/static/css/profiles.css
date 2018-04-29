@@ -1,0 +1,43 @@
+
+.top_part{
+color: #0000A0;
+border: solid 1px;
+}
+
+.user-information{
+    text-align: left;
+    margin-top: 50px;
+    color: grey;
+    font-weight: bold;
+}
+
+body{
+    background-color: #DDF0FF;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+#profilepicture
+{
+    float: left;
+    height:200px;
+    padding: 5px; 
+    width: 200px;
+}
+
+
+
+div.profiles{
+    padding-bottom: 80px;
+    background-color: white;
+}
+
+h3{
+    color:black;
+}
+
+button{
+    position:relative;
+}
+
+
